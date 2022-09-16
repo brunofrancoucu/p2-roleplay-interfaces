@@ -1,4 +1,4 @@
-![Banner](./Assets/banner.png)
+![Banner](./Assets/banner.jpeg)
 
 ![UCU](https://github.com/ucudal/PII_Conceptos_De_POO/raw/master/Assets/logo-ucu.png)
 

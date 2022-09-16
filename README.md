@@ -42,9 +42,15 @@ Existen muchos elementos, y podemos encontrar algunas cosas en común:
 
 # Desafío
 
+## Parte 0: Diseño
+
+Construyan el diagrama de clases de la solución,agregando las abstracciones que identifiquen, dada
+la descripción de elementos y personajes.
+
 ## Parte 1: Refactoring
 
-Refactorizen<sup>1</sup> el código de la [parte 1](https://github.com/ucudal/PII_RoleplayGame_1_Start), agregando las abstracciones que identifiquen de la descripción de elementos y personajes anterior.
+Refactorizen<sup>1</sup> el código de la [parte 1](https://github.com/ucudal/PII_RoleplayGame_1_Start),
+aplicando las abstracciones que se identificaron en la parte anterior.
 
 
 ## Parte 2: Comprobar que sigue funcionando

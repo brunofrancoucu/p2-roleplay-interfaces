@@ -1,61 +1,60 @@
-namespace RoleplayGame
+namespace Ucu.Poo.RoleplayGame;
+
+public class Knight
 {
-    public class Knight
+    private int health = 100;
+
+    public Knight(string name)
     {
-        private int health = 100;
+        this.Name = name;
+    }
 
-        public Knight(string name)
+    public string Name { get; set; }
+
+    public Sword Sword { get; set; }
+
+    public Shield Shield { get; set; }
+
+    public Armor Armor { get; set; }
+
+    public int AttackValue
+    {
+        get
         {
-            this.Name = name;
+            return Sword.AttackValue;
         }
+    }
 
-        public string Name { get; set; }
-
-        public Sword Sword { get; set; }
-
-        public Shield Shield { get; set; }
-
-        public Armor Armor { get; set; }
-
-        public int AttackValue
+    public int DefenseValue
+    {
+        get
         {
-            get
-            {
-                return Sword.AttackValue;
-            }
+            return Armor.DefenseValue + Shield.DefenseValue;
         }
+    }
 
-        public int DefenseValue
+    public int Health
+    {
+        get
         {
-            get
-            {
-                return Armor.DefenseValue + Shield.DefenseValue;
-            }
+            return this.health;
         }
+        private set
+        {
+            this.health = value < 0 ? 0 : value;
+        }
+    }
 
-        public int Health
+    public void ReceiveAttack(int power)
+    {
+        if (this.DefenseValue < power)
         {
-            get
-            {
-                return this.health;
-            }
-            private set
-            {
-                this.health = value < 0 ? 0 : value;
-            }
+            this.Health -= power - this.DefenseValue;
         }
+    }
 
-        public void ReceiveAttack(int power)
-        {
-            if (this.DefenseValue < power)
-            {
-                this.Health -= power - this.DefenseValue;
-            }
-        }
-
-        public void Cure()
-        {
-            this.Health = 100;
-        }
+    public void Cure()
+    {
+        this.Health = 100;
     }
 }

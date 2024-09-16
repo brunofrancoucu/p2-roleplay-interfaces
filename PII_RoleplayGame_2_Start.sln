@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\Program\Prog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4AD47FAA-D175-4ED7-A882-FA0BF7189E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Library", "test\Test.Library\Test.Library.csproj", "{2AB1575E-8FDC-4057-8B29-1E5C3F58F896}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTests", "test\LibraryTests\LibraryTests.csproj", "{2AB1575E-8FDC-4057-8B29-1E5C3F58F896}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

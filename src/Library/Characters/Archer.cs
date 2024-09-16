@@ -1,59 +1,58 @@
-namespace RoleplayGame
+namespace Ucu.Poo.RoleplayGame;
+
+public class Archer
 {
-    public class Archer
+    private int health = 100;
+
+    public Archer(string name)
     {
-        private int health = 100;
+        this.Name = name;
+    }
 
-        public Archer(string name)
+    public string Name { get; set; }
+    
+    public Bow Bow { get; set; }
+
+    public Helmet Helmet { get; set; }
+
+    public int AttackValue
+    {
+        get
         {
-            this.Name = name;
+            return Bow.AttackValue;
         }
+    }
 
-        public string Name { get; set; }
-        
-        public Bow Bow { get; set; }
-
-        public Helmet Helmet { get; set; }
-
-        public int AttackValue
+    public int DefenseValue
+    {
+        get
         {
-            get
-            {
-                return Bow.AttackValue;
-            }
+            return Helmet.DefenseValue;
         }
+    }
 
-        public int DefenseValue
+    public int Health
+    {
+        get
         {
-            get
-            {
-                return Helmet.DefenseValue;
-            }
+            return this.health;
         }
+        private set
+        {
+            this.health = value < 0 ? 0 : value;
+        }
+    }
 
-        public int Health
+    public void ReceiveAttack(int power)
+    {
+        if (this.DefenseValue < power)
         {
-            get
-            {
-                return this.health;
-            }
-            private set
-            {
-                this.health = value < 0 ? 0 : value;
-            }
+            this.Health -= power - this.DefenseValue;
         }
+    }
 
-        public void ReceiveAttack(int power)
-        {
-            if (this.DefenseValue < power)
-            {
-                this.Health -= power - this.DefenseValue;
-            }
-        }
-
-        public void Cure()
-        {
-            this.Health = 100;
-        }
+    public void Cure()
+    {
+        this.Health = 100;
     }
 }

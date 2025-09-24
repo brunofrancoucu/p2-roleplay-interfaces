@@ -1,0 +1,67 @@
+@startuml
+
+!include https://raw.githubusercontent.com/brunofrancoucu/plantuml-dark-contrast-theme/main/theme.puml
+
+title Architecture Diagram
+
+interface ICharacter {
+    + Name: string
+    + Health: int
+    --
+    + AttackValue(): int
+    + DefenceValue(): int
+    __
+    + ReceiveAttack(int power): void
+    + Cure(): void
+}
+
+package "Character Implementations" as Characters {
+class Archer
+class Dwarf
+class Knight
+class Wizard
+}
+
+ICharacter <|.. Characters : Implements
+
+package "Item Interfaces" {
+    interface IItem {
+        + Name: string
+    }
+
+    interface IDefensible {
+        + DefenceValue: int {get}
+    }
+
+    interface IAttackable {
+        + AttackValue: int {get}
+    }
+}
+
+package "Item Attackables" as Att {
+  class Axe
+  class Bow
+  class Sword
+}
+
+package "Item Defensibles" as Def {
+  class Armor
+  class Helmet
+  class Shield
+}
+
+package "Item Attackables and Defensibles" as Its {
+  class Staff
+  class Spell
+  class SpellsBook
+}
+
+IItem <|.. Att : Implements
+IAttackable <|.. Att : Implements
+IItem <|.. Def : Implements
+IDefensible <|.. Def : Implements
+IItem <|.. Its : Implements
+IDefensible <|.. Its : Implements
+IAttackable <|.. Its : Implements
+
+@enduml

@@ -1,6 +1,8 @@
 <img alt="UCU" src="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg"
 width="150"/>
 
+<img src="docs/arch.svg">
+
 # Universidad Católica del Uruguay
 
 ## Facultad de Ingeniería y Tecnologías

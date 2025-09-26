@@ -2,7 +2,7 @@ namespace Items;
  
 public interface IItem  
 {
-    string Name { get; set; }  // Lo mínimo que todo item debe tener 
+    string Name { get; set; }  // Lo minimo que todos los items deben tener  
 }
 
 public interface IDamageable

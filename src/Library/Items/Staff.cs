@@ -1,20 +1,15 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Staff
+public class Staff : IItem, IDamageable, IDefensible // Bastón mágico tiene ambos: defensa y ataque 
 {
-    public int AttackValue 
-    {
-        get
-        {
-            return 100;
-        } 
-    }
+    public string Name  { get; set; }
+    public int AttackValue { get; set; }
+    public int DefenceValue { get; set; }
 
-    public int DefenseValue
+    public Staff(string Name, int AttackValue, int DefenceValue) // Inicializo constructor
     {
-        get
-        {
-            return 100;
-        }
+        this.Name = Name;
+        this.AttackValue = AttackValue;
+        this.DefenceValue = DefenceValue;
     }
 }

@@ -25,11 +25,11 @@ public class Knight:ICharacter
         }
     }
 
-    public int DefenseValue
+    public int DefenceValue
     {
         get
         {
-            return Armor.DefenseValue + Shield.DefenseValue;
+            return Armor.DefenceValue + Shield.DefenceValue;
         }
     }
 
@@ -47,9 +47,9 @@ public class Knight:ICharacter
 
     public void ReceiveAttack(int power)
     {
-        if (this.DefenseValue < power)
+        if (this.DefenceValue < power)
         {
-            this.Health -= power - this.DefenseValue;
+            this.Health -= power - this.DefenceValue;
         }
     }
 

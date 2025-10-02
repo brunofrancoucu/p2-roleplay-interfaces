@@ -1,12 +1,13 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Bow
+public class Bow : IItem, IDamageable // Arco tiene daño, pero no defensa
 {
-    public int AttackValue 
+    public string Name  { get; set; }
+    public int AttackValue { get; set; }
+
+    public Bow(string Name, int AttackValue)  // Inicializo constructor
     {
-        get
-        {
-            return 15;
-        } 
+        this.Name = Name;
+        this.AttackValue = AttackValue;
     }
 }

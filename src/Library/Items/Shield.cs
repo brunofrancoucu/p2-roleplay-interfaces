@@ -1,12 +1,13 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Shield
+public class Shield : IItem, IDefensible  // Escudo tiene defensa, pero no daño
 {
-    public int DefenseValue
+    public string Name  { get; set; }
+    public int DefenceValue { get; set; }
+    
+    public Shield(string Name, int DefenceValue) // Inicializo constructor
     {
-        get
-        {
-            return 14;
-        }
+        this.Name = Name;
+        this.DefenceValue = DefenceValue;
     }
 }

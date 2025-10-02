@@ -1,12 +1,13 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Sword
+public class Sword : IItem, IDamageable // Espada tiene daño, pero no defensa
 {
-    public int AttackValue 
+    public string Name  { get; set; }
+    public int AttackValue { get; set; }
+
+    public Sword(string Name, int AttackValue)  // Inicializo constructor
     {
-        get
-        {
-            return 20;
-        } 
+        this.Name = Name;
+        this.AttackValue = AttackValue;
     }
 }

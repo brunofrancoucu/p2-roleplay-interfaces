@@ -1,12 +1,13 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Axe
+public class Axe : IItem, IDamageable // Hacha tiene daño, pero no defensa
 {
-    public int AttackValue 
+    public string Name  { get; set; }
+    public int AttackValue { get; set; }
+
+    public Axe(string Name, int AttackValue)  // Inicializo constructor
     {
-        get
-        {
-            return 25;
-        } 
+        this.Name = Name;
+        this.AttackValue = AttackValue;
     }
 }

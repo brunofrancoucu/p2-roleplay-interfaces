@@ -23,11 +23,11 @@ public class Archer : ICharacter
         }
     }
 
-    public int DefenseValue
+    public int DefenceValue
     {
         get
         {
-            return Helmet.DefenseValue;
+            return Helmet.DefenceValue;
         }
     }
 
@@ -45,9 +45,9 @@ public class Archer : ICharacter
 
     public void ReceiveAttack(int power)
     {
-        if (this.DefenseValue < power)
+        if (this.DefenceValue < power)
         {
-            this.Health -= power - this.DefenseValue;
+            this.Health -= power - this.DefenceValue;
         }
     }
 

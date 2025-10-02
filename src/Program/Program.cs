@@ -1,16 +1,16 @@
 ﻿using Ucu.Poo.RoleplayGame;
 
 SpellsBook book = new SpellsBook();
-book.Spells = new Spell[]{ new Spell() };
+book.Spells.Add(new Spell("Spell1", 22, 11));
 
 Wizard gandalf = new Wizard("Gandalf");
-gandalf.Staff = new Staff();
+gandalf.Staff = new Staff("Gandalf", 1, 5);
 gandalf.SpellsBook = book;
 
 Dwarf gimli = new Dwarf("Gimli");
-gimli.Axe = new Axe();
-gimli.Helmet = new Helmet();
-gimli.Shield = new Shield();
+gimli.Axe = new Axe("Axe", 33);
+gimli.Helmet = new Helmet("Helmet", 42);
+gimli.Shield = new Shield("Shield", 26);
 
 Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
 Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");

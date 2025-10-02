@@ -1,12 +1,14 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public class Armor
+// Items de defensa:
+public class Armor : IItem, IDefensible  // Armadura tiene defensa, pero no daño
 {
-    public int DefenseValue
+    public string Name  { get; set; }
+    public int DefenceValue { get; set; }
+
+    public Armor(string Name, int DefenceValue) // Inicializo constructor
     {
-        get
-        {
-            return 25;
-        }
+        this.Name = Name;
+        this.DefenceValue = DefenceValue;
     }
 }

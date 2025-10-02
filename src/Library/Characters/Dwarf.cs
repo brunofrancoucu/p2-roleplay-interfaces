@@ -25,11 +25,11 @@ public class Dwarf : ICharacter
         }
     }
 
-    public int DefenseValue
+    public int DefenceValue
     {
         get
         {
-            return Shield.DefenseValue + Helmet.DefenseValue;
+            return Shield.DefenceValue + Helmet.DefenceValue;
         }
     }
 
@@ -47,9 +47,9 @@ public class Dwarf : ICharacter
 
     public void ReceiveAttack(int power)
     {
-        if (this.DefenseValue < power)
+        if (this.DefenceValue < power)
         {
-            this.Health -= power - this.DefenseValue;
+            this.Health -= power - this.DefenceValue;
         }
     }
 

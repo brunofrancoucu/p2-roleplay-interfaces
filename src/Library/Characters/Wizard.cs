@@ -23,11 +23,11 @@ public class Wizard:ICharacter
         }
     }
 
-    public int DefenseValue
+    public int DefenceValue
     {
         get
         {
-            return SpellsBook.DefenseValue + Staff.DefenseValue;
+            return SpellsBook.DefenceValue + Staff.DefenceValue;
         }
     }
 
@@ -45,9 +45,9 @@ public class Wizard:ICharacter
 
     public void ReceiveAttack(int power)
     {
-        if (this.DefenseValue < power)
+        if (this.DefenceValue < power)
         {
-            this.Health -= power - this.DefenseValue;
+            this.Health -= power - this.DefenceValue;
         }
     }
 

@@ -2,7 +2,7 @@ namespace Ucu.Poo.RoleplayGame;
 
 public class Dwarf : ICharacter
 {
-    private int health = 100;
+    private int _health = 100;
 
     public Dwarf(string name)
     {
@@ -37,24 +37,21 @@ public class Dwarf : ICharacter
     {
         get
         {
-            return this.health;
+            return this._health + this.DefenceValue;
         }
         private set
         {
-            this.health = value < 0 ? 0 : value;
+            this._health = value < 0 ? 0 : value;
         }
     }
 
     public void ReceiveAttack(int power)
     {
-        if (this.DefenceValue < power)
-        {
-            this.Health -= power - this.DefenceValue;
-        }
+        this._health -= power;
     }
 
     public void Cure()
     {
-        this.Health = 100;
+        this._health = 100;
     }
 }
